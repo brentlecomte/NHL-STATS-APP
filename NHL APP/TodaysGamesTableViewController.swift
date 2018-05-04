@@ -43,8 +43,8 @@ class TodaysGamesTableViewController: UITableViewController {
             print("detaildata", detailData)
             let decoder = JSONDecoder()
             do {
-                let jsondata = try decoder.decode(Dates.self, from: detailData)
-                gameData = jsondata.games
+                let jsondata = try decoder.decode([Dates].self, from: detailData)
+                gameData = jsondata //Hier .instantie wil doen krijg ik ook een error
                
                 DispatchQueue.main.async{
                     self.tableView.reloadData()

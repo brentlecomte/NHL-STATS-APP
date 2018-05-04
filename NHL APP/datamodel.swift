@@ -15,7 +15,7 @@ struct Initial: Codable {
     let totalGames: Int
     let totalMatches: Int
     let wait: Int
-    let dates: Dates
+    let dates: [Dates]
 }
 
 
