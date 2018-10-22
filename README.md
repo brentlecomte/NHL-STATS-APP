@@ -10,13 +10,13 @@ In this app you can see live scores, actions, teams stats and the rankings.
 
 ## SOME SCREENSHOTS
 
-![](screens/home.png)
-![](screens/match.png)
-![](screens/no-match.png)
-![](screens/detail.png)
-![](screens/teams.png)
-![](screens/team.png)
-![](screens/standins.png)
+![](NHL%20APP/screenshots/home.png)
+![](NHL%20APP/screenshots/match.png)
+![](NHL%20APP/screenshots/no-match.png)
+![](NHL%20APP/screenshots/detail.png)
+![](NHL%20APP/screenshots/teams.png)
+![](NHL%20APP/screenshots/team.png)
+![](NHL%20APP/screenshots/standins.png)
 
 
 
