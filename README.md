@@ -10,6 +10,13 @@ In this app you can see live scores, actions, teams stats and the rankings.
 
 ## SOME SCREENSHOTS
 
-![](screenshots/home.png)
+![](screens/home.png)
+![](screens/match.png)
+![](screens/no-match.png)
+![](screens/detail.png)
+![](screens/teams.png)
+![](screens/team.png)
+![](screens/standins.png)
+
 
 
