@@ -19,4 +19,5 @@ class todaysGamesCell: UITableViewCell {
     @IBOutlet weak var puckDrop: UILabel!
     @IBOutlet weak var venue: UILabel!
     
+    @IBOutlet weak var noGames: UILabel!
 }

@@ -7,20 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8402666D20A0C2A4006B13A2 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */; };
+		8402666F20A0CECF006B13A2 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402666E20A0CECF006B13A2 /* TeamsTableViewController.swift */; };
+		8402667120A0D108006B13A2 /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402667020A0D108006B13A2 /* TeamsCell.swift */; };
 		843FE1B7209A366C00858278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE1B6209A366C00858278 /* AppDelegate.swift */; };
-		843FE1B9209A366C00858278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE1B8209A366C00858278 /* ViewController.swift */; };
 		843FE1BC209A366D00858278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FE1BA209A366D00858278 /* Main.storyboard */; };
 		843FE1BE209A366E00858278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843FE1BD209A366E00858278 /* Assets.xcassets */; };
 		843FE1C1209A366E00858278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FE1BF209A366E00858278 /* LaunchScreen.storyboard */; };
 		843FE1C9209A427300858278 /* TodaysGamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */; };
 		843FE1CB209A43DC00858278 /* datamodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE1CA209A43DC00858278 /* datamodel.swift */; };
 		843FE1CD209A47D500858278 /* todaysGamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FE1CC209A47D500858278 /* todaysGamesCell.swift */; };
+		8446A4C720A0FE3E007DE2A9 /* LiveFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A4C620A0FE3E007DE2A9 /* LiveFeedTableViewController.swift */; };
+		8446A4C920A0FF3E007DE2A9 /* liveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A4C820A0FF3E007DE2A9 /* liveCell.swift */; };
+		8446A4CB20A19187007DE2A9 /* StandingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A4CA20A19187007DE2A9 /* StandingsTableViewController.swift */; };
+		8446A4CD20A198CA007DE2A9 /* standingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A4CC20A198CA007DE2A9 /* standingsCell.swift */; };
+		84945A6C20A59AA60087B7FF /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */; };
+		84945A6E20A5B1910087B7FF /* TeamsStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */; };
+		84945A7020A5B81D0087B7FF /* statsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6F20A5B81D0087B7FF /* statsCell.swift */; };
+		84E15AB120A3997700B6830C /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E15AB020A3997700B6830C /* PlayersTableViewController.swift */; };
+		84E15AB320A3A52100B6830C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E15AB220A3A52100B6830C /* PlayerCell.swift */; };
+		84F4E83520A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */; };
+		84F4E83720A5CE270071F851 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		8402666E20A0CECF006B13A2 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
+		8402667020A0D108006B13A2 /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
 		843FE1B3209A366C00858278 /* NHL APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NHL APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FE1B6209A366C00858278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		843FE1B8209A366C00858278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843FE1BB209A366D00858278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843FE1BD209A366E00858278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843FE1C0209A366E00858278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +43,17 @@
 		843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysGamesTableViewController.swift; sourceTree = "<group>"; };
 		843FE1CA209A43DC00858278 /* datamodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datamodel.swift; sourceTree = "<group>"; };
 		843FE1CC209A47D500858278 /* todaysGamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaysGamesCell.swift; sourceTree = "<group>"; };
+		8446A4C620A0FE3E007DE2A9 /* LiveFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFeedTableViewController.swift; sourceTree = "<group>"; };
+		8446A4C820A0FF3E007DE2A9 /* liveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveCell.swift; sourceTree = "<group>"; };
+		8446A4CA20A19187007DE2A9 /* StandingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTableViewController.swift; sourceTree = "<group>"; };
+		8446A4CC20A198CA007DE2A9 /* standingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = standingsCell.swift; sourceTree = "<group>"; };
+		84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStatsTableViewController.swift; sourceTree = "<group>"; };
+		84945A6F20A5B81D0087B7FF /* statsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statsCell.swift; sourceTree = "<group>"; };
+		84E15AB020A3997700B6830C /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
+		84E15AB220A3A52100B6830C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStatsOverviewTableViewController.swift; sourceTree = "<group>"; };
+		84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +87,45 @@
 			isa = PBXGroup;
 			children = (
 				843FE1B6209A366C00858278 /* AppDelegate.swift */,
-				843FE1B8209A366C00858278 /* ViewController.swift */,
 				843FE1BA209A366D00858278 /* Main.storyboard */,
-				843FE1CC209A47D500858278 /* todaysGamesCell.swift */,
-				843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */,
+				8446A4C420A0DB83007DE2A9 /* cells classes */,
+				8446A4C520A0DB9A007DE2A9 /* controllers */,
 				843FE1CA209A43DC00858278 /* datamodel.swift */,
 				843FE1BD209A366E00858278 /* Assets.xcassets */,
 				843FE1BF209A366E00858278 /* LaunchScreen.storyboard */,
 				843FE1C2209A366E00858278 /* Info.plist */,
 			);
 			path = "NHL APP";
+			sourceTree = "<group>";
+		};
+		8446A4C420A0DB83007DE2A9 /* cells classes */ = {
+			isa = PBXGroup;
+			children = (
+				843FE1CC209A47D500858278 /* todaysGamesCell.swift */,
+				8402667020A0D108006B13A2 /* TeamsCell.swift */,
+				8446A4C820A0FF3E007DE2A9 /* liveCell.swift */,
+				8446A4CC20A198CA007DE2A9 /* standingsCell.swift */,
+				84E15AB220A3A52100B6830C /* PlayerCell.swift */,
+				84945A6F20A5B81D0087B7FF /* statsCell.swift */,
+			);
+			path = "cells classes";
+			sourceTree = "<group>";
+		};
+		8446A4C520A0DB9A007DE2A9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8446A4C620A0FE3E007DE2A9 /* LiveFeedTableViewController.swift */,
+				843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */,
+				8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */,
+				8402666E20A0CECF006B13A2 /* TeamsTableViewController.swift */,
+				8446A4CA20A19187007DE2A9 /* StandingsTableViewController.swift */,
+				84E15AB020A3997700B6830C /* PlayersTableViewController.swift */,
+				84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */,
+				84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */,
+				84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */,
+				84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +160,12 @@
 				TargetAttributes = {
 					843FE1B2209A366C00858278 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -144,11 +205,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84945A6E20A5B1910087B7FF /* TeamsStatsTableViewController.swift in Sources */,
+				8446A4CD20A198CA007DE2A9 /* standingsCell.swift in Sources */,
+				8446A4C920A0FF3E007DE2A9 /* liveCell.swift in Sources */,
+				84945A6C20A59AA60087B7FF /* PlayerDetailViewController.swift in Sources */,
 				843FE1CD209A47D500858278 /* todaysGamesCell.swift in Sources */,
 				843FE1C9209A427300858278 /* TodaysGamesTableViewController.swift in Sources */,
+				8402666F20A0CECF006B13A2 /* TeamsTableViewController.swift in Sources */,
+				84F4E83720A5CE270071F851 /* FeedDetailViewController.swift in Sources */,
+				8402667120A0D108006B13A2 /* TeamsCell.swift in Sources */,
 				843FE1CB209A43DC00858278 /* datamodel.swift in Sources */,
-				843FE1B9209A366C00858278 /* ViewController.swift in Sources */,
+				84945A7020A5B81D0087B7FF /* statsCell.swift in Sources */,
+				8446A4C720A0FE3E007DE2A9 /* LiveFeedTableViewController.swift in Sources */,
+				84E15AB120A3997700B6830C /* PlayersTableViewController.swift in Sources */,
 				843FE1B7209A366C00858278 /* AppDelegate.swift in Sources */,
+				8402666D20A0C2A4006B13A2 /* TeamsViewController.swift in Sources */,
+				8446A4CB20A19187007DE2A9 /* StandingsTableViewController.swift in Sources */,
+				84E15AB320A3A52100B6830C /* PlayerCell.swift in Sources */,
+				84F4E83520A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.devine.nad.iPresent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -319,7 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.devine.nad.iPresent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

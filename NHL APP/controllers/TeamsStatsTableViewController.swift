@@ -1,53 +1,52 @@
 //
-//  TodaysGamesTableViewController.swift
+//  TeamsStatsTableViewController.swift
 //  NHL APP
 //
-//  Created by Brent Le Comte on 02/05/2018.
+//  Created by Brent Le Comte on 11/05/2018.
 //  Copyright © 2018 Brent Le Comte. All rights reserved.
 //
 
 import UIKit
 
-class TodaysGamesTableViewController: UITableViewController {
+class TeamsStatsTableViewController: UITableViewController {
     
-    
-    
-    var todaysGamesURL: URL = URL(string: "https://statsapi.web.nhl.com/api/v1/schedule")!
-    
-    var gameData: [Dates] = []
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    var teamId: Int = 0
+    var baseURL = "https://statsapi.web.nhl.com/api/v1/teams/"
+    var endURL = "/stats"
+    var statsData: [Stats] = []
 
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTodaysGames()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func loadTodaysGames(){
-        print("load Games")
-        
+        let detailURL = URL(string: "\(baseURL)\(teamId)\(endURL)")!
+        print(detailURL)
         view.addSubview(activityIndicator)
         activityIndicator.frame = view.bounds
         activityIndicator.startAnimating()
         
-        let todaysGamesDatatask = URLSession.shared.dataTask(with: todaysGamesURL, completionHandler: dataLoaded)
-        
-        todaysGamesDatatask.resume()
+        let task = URLSession.shared.dataTask(with: detailURL, completionHandler: dataLoaded)
+        task.resume()
     }
     
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     func dataLoaded(data:Data?,response:URLResponse?,error:Error?){
         if let detailData = data{
-            print("detaildata", detailData)
             let decoder = JSONDecoder()
-            do {
-                let jsondata = try decoder.decode([Dates].self, from: detailData)
-                gameData = jsondata //Hier .instantie wil doen krijg ik ook een error
-               
-                DispatchQueue.main.async{
+            do{
+                let jsondata = try decoder.decode(Initial.self, from: detailData)
+                statsData = jsondata.stats!
+                print(statsData)
+                DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.activityIndicator.removeFromSuperview()
                 }
             }catch let error{
                 print(error)
@@ -55,31 +54,7 @@ class TodaysGamesTableViewController: UITableViewController {
         }else{
             print(error!)
         }
-        
     }
-    
-//    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-//        let decoder = JSONDecoder()
-//        do {
-//            let dates = try decoder.decode([String: Dates].self, from: data)
-//            print(dates)
-//            if let game = dates["Game"] {
-//                gameData = game.games
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                    self.activityIndicator.removeFromSuperview()
-//                }
-//            }
-//        } catch let error {
-//            print(error)
-//            //opnieuw proberen
-//            DispatchQueue.main.async {
-//                self.loadTodaysGames()
-//            }
-//
-//        }
-//    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,17 +64,14 @@ class TodaysGamesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return gameData.count
+        return statsData.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "todaysGamesCell", for: indexPath) as! todaysGamesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath) as! StatsCell
         
-//        cell.homeTeamName?.text = gameData[indexPath.row].games.teams.home.team
-//        cell.awayTeamName?.text = gameData[indexPath.row].teams.away.team.name
-//        cell.puckDrop?.text = gameData[indexPath.row].gameDate
-//        cell.venue?.text = gameData[indexPath.row].venue.name
-        
+        cell.title.text = "yeet"
+
         return cell
     }
 
