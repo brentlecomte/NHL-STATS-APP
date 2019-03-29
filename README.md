@@ -7,9 +7,9 @@ This was a school project, the goal was to make an app about something you like 
   - The app should at least have 3 screens
   - The app should have an appealing design (Totally forgot about this part 🤷‍♂️)
   
- I decided to make a simplified version of the NHL app. I am an NHL fan so I though this would be interesting. To get all the data needed to display live scores, the teams, players and rankings I used the NHL public api. The API isn't really documented so getting the right endpoints was quite tricky until I found this documentation by: sidwarkd
+ I decided to make a simplified version of the NHL app. I am an NHL fan so I though this would be interesting. To get all the data needed to display live scores, the teams, players and rankings I used the NHL public api. The API isn't really documented so getting the right endpoints was quite tricky until I found this documentation by: @sidwarkd
 
-(https://www.kevinsidwar.com/iot/2017/7/1/the-undocumented-nhl-stats-api)
+https://www.kevinsidwar.com/iot/2017/7/1/the-undocumented-nhl-stats-api
 
 This made everything a lot easier.
   
