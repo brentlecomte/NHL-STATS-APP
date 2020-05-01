@@ -18,10 +18,10 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
     var gameTimer: Timer!
     
     //local file, for testing or when no games are being played or will be played today
-//    var todaysGamesURL: URL = URL(string: "http://student.howest.be/brent.le.comte/20172018/native/shedule.json")!
+    var todaysGamesURL: URL = URL(string: "http://student.howest.be/brent.le.comte/20172018/native/shedule.json")!
     
     //live API
-    var todaysGamesURL: URL = URL(string: "https://statsapi.web.nhl.com/api/v1/schedule")!
+//    var todaysGamesURL: URL = URL(string: "https://statsapi.web.nhl.com/api/v1/schedule")!
     var liveFeed = ""
     
     

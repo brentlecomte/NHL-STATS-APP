@@ -38,22 +38,23 @@ class LiveFeedTableViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         
         //real time live feed
-        liveFeedURL = URL(string: "\(baseURL)\(liveFeedLink)")!
-        gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+//        liveFeedURL = URL(string: "\(baseURL)\(liveFeedLink)")!
+        DispatchQueue.main.async {
+            self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.runTimedCode), userInfo: nil, repeats: true)
+        }
 
-        //wanneer er geen feed available is
-//       liveFeedURL = URL(string: "https://statsapi.web.nhl.com/api/v1/game/2017030213/feed/live")
+
+//        wanneer er geen feed available is
+       liveFeedURL = URL(string: "https://statsapi.web.nhl.com/api/v1/game/2017030213/feed/live")
         view.addSubview(activityIndicator)
         activityIndicator.frame = view.bounds
         activityIndicator.startAnimating()
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(succes, error)in if error != nil {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(succes, error) in if error != nil {
             print("failed")
         }else{
             print("nailed it")
-            }})
-        
-        
+        }})
         
         loadMatchInfo()
     }
@@ -74,8 +75,8 @@ class LiveFeedTableViewController: UIViewController, UITableViewDelegate, UITabl
         if(liveFeedData.count == 0) {
             liveFeedtable.isHidden = true
         } else {
-            notStarted.isHidden = true
             liveFeedtable.isHidden = false
+            notStarted.isHidden = true
             if(liveFeedData.count != prevAllPlaysLength) {
                 timedNotifications(inSeconds: 1) { (succes) in
                     if succes {
@@ -135,7 +136,7 @@ class LiveFeedTableViewController: UIViewController, UITableViewDelegate, UITabl
                     self.tableView.reloadData()
                     self.activityIndicator.removeFromSuperview()
                 }
-            }catch let error{
+            } catch let error{
                 print(error)
             }
         }else{
