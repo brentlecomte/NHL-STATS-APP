@@ -27,15 +27,18 @@ class TodaysGamesCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(team: Team, puckDrop: String, venue: String, score: (awayTeam: Int, homeTeam: Int)) {
-        if let awayTeam = team.away.team?.name, let homeTeam = team.home.team?.name {
+    func configure(team: Team, puckDrop: String, venue: String) {
+        if let awayTeam = team.away.team?.name,
+           let homeTeam = team.home.team?.name,
+           let awayScore = team.away.score,
+           let homeScore = team.home.score {
             awayTeamImageView.image = UIImage(named: awayTeam)
             awayTeamTeamNameLabel.text = awayTeam
-            awayTeamScoreLabel.text = String(score.awayTeam)
+            awayTeamScoreLabel.text = String(awayScore)
             
             homeTeamImageView.image = UIImage(named: homeTeam)
             homeTeamTeamNameLabel.text = homeTeam
-            homeTeamScoreLabel.text = String(score.homeTeam)
+            homeTeamScoreLabel.text = String(homeScore)
         }
         
         self.puckDropLabel.text = puckDrop

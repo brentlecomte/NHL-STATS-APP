@@ -10,7 +10,6 @@ import UIKit
 import UserNotifications
 
 class TodaysGamesTableViewController: UITableViewController {
-    var gameTimer: Timer!
     weak var delegate: TodaysGamesViewControllerDelegate?
         
     override func viewDidLoad() {
@@ -36,7 +35,7 @@ class TodaysGamesTableViewController: UITableViewController {
         }
         
         let gameData = self.gameData()[indexPath.row]
-        cell.configure(team: gameData.teams, puckDrop: gameData.dateRange(), venue: "@" + gameData.venue.name, score: (1, 0))
+        cell.configure(team: gameData.teams, puckDrop: gameData.dateRange(), venue: "@" + gameData.venue.name)
         
         return cell
     }
