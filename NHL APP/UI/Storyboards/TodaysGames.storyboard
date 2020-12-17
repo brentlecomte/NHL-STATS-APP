@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TodaysGamesTableViewController-->
+        <scene sceneID="IFW-Bj-Ybr">
+            <objects>
+                <viewController storyboardIdentifier="TodaysGamesTableViewController" title="TodaysGamesTableViewController" id="ac8-mv-BR1" customClass="TodaysGamesTableViewController" customModule="NHL_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7r5-0C-aeK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There aren't any games played today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fil-24-jev">
+                                <rect key="frame" x="66.5" y="643" width="281" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="y95-Nq-kEJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nogames" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-Mn-mh0">
+                                <rect key="frame" x="47" y="128" width="321" height="507"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fyn-2c-Cfh">
+                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ac8-mv-BR1" id="9Zh-1j-5aI"/>
+                                    <outlet property="delegate" destination="ac8-mv-BR1" id="gFl-Jj-kDn"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAYS GAMES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhB-hu-ph8">
+                                <rect key="frame" x="20" y="90" width="378" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ilF-wE-T53"/>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.30980392159999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mK9-Mn-mh0" firstAttribute="top" secondItem="UhB-hu-ph8" secondAttribute="bottom" constant="2" id="2vK-uD-AF6"/>
+                            <constraint firstItem="UhB-hu-ph8" firstAttribute="trailing" secondItem="ilF-wE-T53" secondAttribute="trailing" constant="-16" id="BqJ-ne-ln7"/>
+                            <constraint firstItem="UhB-hu-ph8" firstAttribute="leading" secondItem="ilF-wE-T53" secondAttribute="leading" constant="20" id="F2j-pL-7fo"/>
+                            <constraint firstItem="ilF-wE-T53" firstAttribute="bottom" secondItem="fyn-2c-Cfh" secondAttribute="bottom" id="HT1-Vt-Do0"/>
+                            <constraint firstItem="fyn-2c-Cfh" firstAttribute="top" secondItem="ilF-wE-T53" secondAttribute="top" constant="40" id="Mat-KE-cPH"/>
+                            <constraint firstItem="ilF-wE-T53" firstAttribute="bottom" secondItem="Fil-24-jev" secondAttribute="bottom" constant="126" id="MeE-c8-sQd"/>
+                            <constraint firstItem="mK9-Mn-mh0" firstAttribute="leading" secondItem="ilF-wE-T53" secondAttribute="leading" constant="47" id="Qge-gg-x4T"/>
+                            <constraint firstItem="fyn-2c-Cfh" firstAttribute="leading" secondItem="ilF-wE-T53" secondAttribute="leading" id="Tf6-k5-CPf"/>
+                            <constraint firstItem="ilF-wE-T53" firstAttribute="trailing" secondItem="fyn-2c-Cfh" secondAttribute="trailing" id="U1j-5f-Yqz"/>
+                            <constraint firstItem="Fil-24-jev" firstAttribute="top" secondItem="mK9-Mn-mh0" secondAttribute="bottom" constant="8" id="dCl-F3-xOo"/>
+                            <constraint firstItem="UhB-hu-ph8" firstAttribute="top" secondItem="ilF-wE-T53" secondAttribute="top" constant="2" id="eqR-WF-EgJ"/>
+                            <constraint firstItem="ilF-wE-T53" firstAttribute="trailing" secondItem="mK9-Mn-mh0" secondAttribute="trailing" constant="46" id="fwV-uM-g3j"/>
+                            <constraint firstItem="Fil-24-jev" firstAttribute="centerX" secondItem="7r5-0C-aeK" secondAttribute="centerX" id="hku-0d-95k"/>
+                            <constraint firstItem="fyn-2c-Cfh" firstAttribute="top" secondItem="UhB-hu-ph8" secondAttribute="bottom" constant="2" id="st7-6n-kf8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NHL" id="qU7-4f-LE9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="noGames" destination="Fil-24-jev" id="jxg-Kk-zIa"/>
+                        <outlet property="noGamesimage" destination="mK9-Mn-mh0" id="nQ7-rL-Ft6"/>
+                        <outlet property="tableView" destination="fyn-2c-Cfh" id="pkI-Z7-h5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nu1-60-9ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4933.6000000000004" y="-846.02698650674665"/>
+        </scene>
+        <!--Live-->
+        <scene sceneID="kh5-Pe-IGa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ajl-Ht-YqL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Live" id="I6f-va-bfH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iK6-2m-vhy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ac8-mv-BR1" kind="relationship" relationship="rootViewController" id="y3I-Wf-6PY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EdG-AM-JCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3996" y="-846"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nogames" width="824" height="1164"/>
+    </resources>
+</document>

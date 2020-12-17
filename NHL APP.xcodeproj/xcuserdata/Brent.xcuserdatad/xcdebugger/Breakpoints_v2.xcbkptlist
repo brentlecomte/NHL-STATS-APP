@@ -14,8 +14,8 @@
             filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,16 +71,368 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA4A0BA4-EAFA-4812-8E65-EF3B07DCE00E"
+            uuid = "A01B4C54-E751-4E07-89CC-52F78399E601"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B7B99CC-1EFA-4837-9F5D-3B9A3D5A1DAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6F8DCEA-6FA6-427E-8234-01596A9D8245"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/TodaysGamesTableViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "loadSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC84173B-F6F9-4D59-81D1-A998CE255FE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/TodaysGamesTableViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25F39F97-FB58-4F18-BBFE-49DF4D9F300A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/GamesDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04AE8DE7-61A1-4D88-ADC4-A50F0DD4CDFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/GamesDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "680DB059-C753-46C1-9B86-1571CC3ADDBD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ServiceProviders/GamesServiceProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchGamesSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11BAEEC6-606D-46D6-8732-76F5006782AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ServiceProviders/GamesServiceProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchGamesSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF61C8EA-5BC8-4117-B67D-324E45493863"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ServiceProviders/GamesServiceProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchGamesSchedule(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D39C9341-DA9E-4F00-93AB-5B987565AB20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/GamesDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchSchedule(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D39C9341-DA9E-4F00-93AB-5B987565AB20 - 5e26af2e64542fa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NHL_APP.GamesDataProvider.fetchSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/GamesDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D39C9341-DA9E-4F00-93AB-5B987565AB20 - a007fdd9d2e031ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; () in NHL_APP.GamesDataProvider.fetchSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/GamesDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "177">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E0881B7-DCF6-42D3-93C0-C89CCC1C69FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ServiceProviders/GamesServiceProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchGamesSchedule(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E0881B7-DCF6-42D3-93C0-C89CCC1C69FE - 76eb6bfa26ea362b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in NHL_APP.NHLGamesServiceProvider.fetchGamesSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/ServiceProviders/GamesServiceProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "325">
+               </Location>
+               <Location
+                  uuid = "9E0881B7-DCF6-42D3-93C0-C89CCC1C69FE - 76eb6bfa26ea362b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in NHL_APP.NHLGamesServiceProvider.fetchGamesSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/ServiceProviders/GamesServiceProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "367">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FBAA544-A30A-4CA7-BA13-E36377E98273"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ServiceProviders/GamesServiceProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchGamesSchedule(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2FBAA544-A30A-4CA7-BA13-E36377E98273 - e4e70b5bd1efee18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NHL_APP.NHLGamesServiceProvider.fetchGamesSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/ServiceProviders/GamesServiceProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "409">
+               </Location>
+               <Location
+                  uuid = "2FBAA544-A30A-4CA7-BA13-E36377E98273 - 76eb6bfa26ea362b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in NHL_APP.NHLGamesServiceProvider.fetchGamesSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/ServiceProviders/GamesServiceProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "325">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4E89694-30C9-479D-96F1-DB68A9F91E05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/TodaysGamesTableViewViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "loadSchedule(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4E89694-30C9-479D-96F1-DB68A9F91E05 - 5988a62c0becb8ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NHL_APP.TodaysGamesTableViewViewmodel.loadSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/TodaysGamesTableViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "101">
+               </Location>
+               <Location
+                  uuid = "A4E89694-30C9-479D-96F1-DB68A9F91E05 - 65f186b20a6814a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; () in NHL_APP.TodaysGamesTableViewViewmodel.loadSchedule((Swift.Result&lt;Swift.Array&lt;NHL_APP.Game&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NHL APP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brent/NHL-STATS-APP/NHL%20APP/TodaysGamesTableViewViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "177">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AACE385E-8831-48CB-A8DF-576BEB98034F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/controllers/TodaysGamesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99FCB14F-A0BE-4C7B-92D9-805D791FC022"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHL APP/ViewControllerProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "todaysGamesTableViewController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
