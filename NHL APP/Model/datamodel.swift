@@ -178,14 +178,14 @@ struct Plays: Codable {
 
 struct AllPlays: Codable {
     let players: [Players]?
-    let result: Result
+    let result: Event
     let about: About?
     let coordinates: Coordinates?
     let team: TeamInfo?
 }
 
 struct CurrentPlay: Codable {
-    let result: Result
+    let result: Event
     let about: About
     let coordinates: Coordinates
 }
@@ -195,7 +195,7 @@ struct Players: Codable {
     let playerType: String?
 }
 
-struct Result: Codable {
+struct Event: Codable {
     let event: String
     let description: String
     let secondaryType: String?
