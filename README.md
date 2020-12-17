@@ -1,4 +1,7 @@
 # NHL-STATS-APP
+Disclaimer: This is my very first iOS swift app.
+ - You can find the old code on the master branch
+ - Atm I am refactoring this project with my skills I've gained over the years. You can find the partial refactor on develop.
 
 This is a really basic app to follow the NHL games live, get info about the teams, see the ranking etc.
 
@@ -31,16 +34,12 @@ It is possible to see al the teams that are currently in the NHL, when selecting
 ### players
 The user can see the players from a team and get the info about them (birthplace, points, goals, position, ...)
 
+## ToDo:
 
-## SOME SCREENSHOTS
-
-![](NHL%20APP/screenshots/home.png)
-![](NHL%20APP/screenshots/match.png)
-![](NHL%20APP/screenshots/no-match.png)
-![](NHL%20APP/screenshots/detail.png)
-![](NHL%20APP/screenshots/teams.png)
-![](NHL%20APP/screenshots/team.png)
-![](NHL%20APP/screenshots/standins.png)
+- Introduce Unit tests
+- Refactor all the massive view controllers
+- Freshen up the design
+- Maybe implement some CI/CD
 
 
 
