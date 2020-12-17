@@ -34,6 +34,7 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = TodaysGamesTableViewViewmodel(gamesDataProvider: gamesDataProvider)
+        addNavBarImage()
         setupTableView()
         loadData()
     }
@@ -58,6 +59,8 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TodaysGamesCell.reuseIdentifier, for: indexPath) as? TodaysGamesCell else {
             return UITableViewCell()
         }
+        
+        // To-Do: clean this up
         let date = gameData[indexPath.row].gameDate
         
         let start = date.index(date.startIndex, offsetBy: 11)
@@ -88,5 +91,22 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
         detailVC.liveFeedLink = gameData[(selectedIndexPath?.row)!].link
         detailVC.homeTeam = (gameData[(selectedIndexPath?.row)!].teams.home.team?.name)!
         detailVC.awayTeam = (gameData[(selectedIndexPath?.row)!].teams.away.team?.name)!
+    }
+}
+
+private extension TodaysGamesTableViewController {
+    func addNavBarImage() {
+        let image = #imageLiteral(resourceName: "nhlLogo")
+        let imageView = UIImageView(image: image)
+        
+        if let bannerWidth = navigationController?.navigationBar.frame.size.width, let bannerHeight = navigationController?.navigationBar.frame.size.height {
+            let bannerX = (bannerWidth )/2 - image.size.width/2
+            let bannerY = (bannerHeight )/2 - image.size.height/2
+            
+            imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        }
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView
     }
 }
