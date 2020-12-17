@@ -59,11 +59,13 @@ struct Team: Codable {
 
 struct Away: Codable {
     let team: TeamInfo?
+    let score: Int?
     let name: String?
 }
 
 struct Home: Codable {
     let team: TeamInfo?
+    let score: Int?
     let name: String?
 }
 
