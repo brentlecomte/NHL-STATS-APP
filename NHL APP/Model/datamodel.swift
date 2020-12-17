@@ -36,6 +36,12 @@ struct Game: Codable {
     let teams: Team
     let venue: Venue
     let content: Content
+    
+    func dateRange() -> String {
+        let start = gameDate.index(gameDate.startIndex, offsetBy: 11)
+        let end = gameDate.index(gameDate.endIndex, offsetBy: -4)
+        return String(describing: start..<end)
+    }
 }
 
 struct Status: Codable {

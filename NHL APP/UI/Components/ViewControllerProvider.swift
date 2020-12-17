@@ -18,11 +18,11 @@ class ViewControllerProvider {
 
     var dataProviders: DataProviders?
     
-    func todaysGamesTableViewController() -> UIViewController {
+    func todaysGamesViewController() -> UIViewController {
         let viewController = initialViewControllerFromStoryboard(.TodaysGames)!
         
-        if let tableViewController = viewController.children.first as? TodaysGamesTableViewController {
-            tableViewController.gamesDataProvider = dataProviders?.gamesDataProvider
+        if let viewController = viewController.children.first as? TodaysGamesViewController {
+            viewController.gamesDataProvider = dataProviders?.gamesDataProvider
         }
         
         return viewController

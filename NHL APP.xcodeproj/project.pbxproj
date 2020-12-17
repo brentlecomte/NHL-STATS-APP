@@ -36,6 +36,7 @@
 		84E34E27258B811100EF5A71 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E34E26258B811100EF5A71 /* ViewControllerProvider.swift */; };
 		84E34E2A258B83F900EF5A71 /* NHLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E34E29258B83F900EF5A71 /* NHLTabBarController.swift */; };
 		84E34E2D258B84D500EF5A71 /* TodaysGames.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E34E2C258B84D500EF5A71 /* TodaysGames.storyboard */; };
+		84E34E3B258BBFF800EF5A71 /* TodaysGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E34E3A258BBFF800EF5A71 /* TodaysGamesViewController.swift */; };
 		84F4E83520A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */; };
 		84F4E83720A5CE270071F851 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		84E34E26258B811100EF5A71 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerProvider.swift; path = "NHL APP/UI/Components/ViewControllerProvider.swift"; sourceTree = SOURCE_ROOT; };
 		84E34E29258B83F900EF5A71 /* NHLTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NHLTabBarController.swift; path = "NHL APP/UI/Components/NHLTabBarController.swift"; sourceTree = SOURCE_ROOT; };
 		84E34E2C258B84D500EF5A71 /* TodaysGames.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodaysGames.storyboard; sourceTree = "<group>"; };
+		84E34E3A258BBFF800EF5A71 /* TodaysGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysGamesViewController.swift; sourceTree = "<group>"; };
 		84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStatsOverviewTableViewController.swift; sourceTree = "<group>"; };
 		84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		8446A4C520A0DB9A007DE2A9 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E34E3A258BBFF800EF5A71 /* TodaysGamesViewController.swift */,
 				8446A4C620A0FE3E007DE2A9 /* LiveFeedTableViewController.swift */,
 				843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */,
 				8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84945A6E20A5B1910087B7FF /* TeamsStatsTableViewController.swift in Sources */,
+				84E34E3B258BBFF800EF5A71 /* TodaysGamesViewController.swift in Sources */,
 				8446A4CD20A198CA007DE2A9 /* standingsCell.swift in Sources */,
 				8446A4C920A0FF3E007DE2A9 /* liveCell.swift in Sources */,
 				840DF076258B5C7100C44735 /* TodaysGamesTableViewViewModel.swift in Sources */,

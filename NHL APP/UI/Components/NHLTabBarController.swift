@@ -16,7 +16,7 @@ class NHLTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func setViewControllers() {
-        todaysGamesTableViewController = ViewControllerProvider.sharedInstance.todaysGamesTableViewController()
+        todaysGamesTableViewController = ViewControllerProvider.sharedInstance.todaysGamesViewController()
         todaysGamesTableViewController?.tabBarItem.title = "Live"
         
         viewControllers = [
