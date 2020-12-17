@@ -49,6 +49,7 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         addNavBarImage()
         loadTodaysGames()
     }
@@ -68,9 +69,16 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
         
         todaysGamesDatatask.resume()
     }
+    
+    func setupTableView() {
+        tableView.register(TodaysGamesCell.nib, forCellReuseIdentifier: TodaysGamesCell.reuseIdentifier)
+        loadViewIfNeeded()
+        _ = self.view
+    }
  
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 211
+        return 239
+        
     }
     
     func dataLoaded(data:Data?,response:URLResponse?,error:Error?){
@@ -104,7 +112,7 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
     }
         
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return gameData.count > 0 ? 1 : 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,7 +121,9 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "todaysGamesCell", for: indexPath) as! todaysGamesCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TodaysGamesCell.reuseIdentifier, for: indexPath) as? TodaysGamesCell else {
+            return UITableViewCell()
+        }
         let date = gameData[indexPath.row].gameDate;
         
         let start = date.index(date.startIndex, offsetBy: 11)
@@ -121,12 +131,7 @@ class TodaysGamesTableViewController: UIViewController, UITableViewDataSource, U
         let range = start..<end
         liveFeed = gameData[indexPath.row].link
         
-        cell.homeTeamName.text = gameData[indexPath.row].teams.home.team?.name
-        cell.awayTeamName.text = gameData[indexPath.row].teams.away.team?.name
-        cell.homeAfbeelding.image = UIImage(named: (gameData[indexPath.row].teams.home.team?.name)!)
-        cell.awayAfbeelding.image = UIImage(named: (gameData[indexPath.row].teams.away.team?.name)!)
-        cell.puckDrop.text = String(date[range])
-        cell.venue.text = "@" + gameData[indexPath.row].venue.name
+        cell.configure(team: gameData[indexPath.row].teams, puckDrop: String(date[range]), venue: "@" + gameData[indexPath.row].venue.name, score: (1, 0))
         
         return cell
     }
