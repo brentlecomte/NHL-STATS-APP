@@ -1,7 +1,7 @@
 # NHL-STATS-APP
 Disclaimer: This is my very first iOS swift app.
  - You can find the old code on the master branch
- - Atm I am refactoring this project with my skills I've gained over the years. You can find the partial refactor on develop.
+ - Atm I am refactoring this project with my skills I've gained over the years. You can find the partial refactor on develop. At this time it is mostly the "live" feed that is refactored.
 
 This is a really basic app to follow the NHL games live, get info about the teams, see the ranking etc.
 
