@@ -9,7 +9,8 @@
 import Foundation
 
 protocol GamesDataProviderProtocol {
-    func fetchSchedule(_ completion: @escaping ((Result<[Game], Error>) -> Void))
+    func fetchSchedule(_ completion: @escaping ((Result<[Game], NHLServiceError>) -> Void))
+    func fetchLiveFeed(liveFeedLink: String, _ completion: @escaping ((Result<Plays, NHLServiceError>) -> Void))
 }
 
 class GamesDataProvider: GamesDataProviderProtocol {
@@ -19,14 +20,11 @@ class GamesDataProvider: GamesDataProviderProtocol {
         self.serviceProvider = serviceProvider
     }
     
-    func fetchSchedule(_ completion: @escaping ((Result<[Game], Error>) -> Void)) {
-        serviceProvider.fetchGamesSchedule { result in
-            switch result {
-            case .success(let schedule):
-                completion(.success(schedule))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+    func fetchSchedule(_ completion: @escaping ((Result<[Game], NHLServiceError>) -> Void)) {
+        serviceProvider.fetchGamesSchedule(completion)
+    }
+    
+    func fetchLiveFeed(liveFeedLink: String, _ completion: @escaping ((Result<Plays, NHLServiceError>) -> Void)) {
+        serviceProvider.fetchLiveGameUpdates(liveFeedLink: liveFeedLink, completion)
     }
 }

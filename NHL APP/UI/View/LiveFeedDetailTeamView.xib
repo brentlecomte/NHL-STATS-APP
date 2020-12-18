@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveFeedDetailTeamView" customModule="NHL_APP" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="LUP-JE-BJ9" id="eJR-b6-6rB"/>
+                <outlet property="imageView" destination="PIx-O4-KVi" id="5SU-du-sNn"/>
+                <outlet property="scoreLabel" destination="Xig-g4-WIo" id="G1f-6k-FWL"/>
+                <outlet property="teamNameLabel" destination="5Ms-5K-Mdb" id="pcn-pB-nD3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LUP-JE-BJ9">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PIx-O4-KVi">
+                    <rect key="frame" x="139.5" y="10" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FQC-7y-utS"/>
+                        <constraint firstAttribute="width" constant="60" id="fFk-0r-Pp1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Jose sharks is a team from the san francisco bay area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-5K-Mdb">
+                    <rect key="frame" x="12" y="82" width="315" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-g4-WIo">
+                    <rect key="frame" x="12" y="135" width="315" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gI4-MS-qtJ"/>
+            <constraints>
+                <constraint firstItem="5Ms-5K-Mdb" firstAttribute="top" secondItem="PIx-O4-KVi" secondAttribute="bottom" constant="12" id="6MG-iO-NQM"/>
+                <constraint firstItem="5Ms-5K-Mdb" firstAttribute="leading" secondItem="gI4-MS-qtJ" secondAttribute="leading" constant="12" id="9og-uW-YiD"/>
+                <constraint firstItem="gI4-MS-qtJ" firstAttribute="trailing" secondItem="Xig-g4-WIo" secondAttribute="trailing" constant="12" id="AL3-Zg-KFX"/>
+                <constraint firstItem="PIx-O4-KVi" firstAttribute="top" secondItem="LUP-JE-BJ9" secondAttribute="top" constant="10" id="DCO-dy-Lqq"/>
+                <constraint firstItem="PIx-O4-KVi" firstAttribute="centerX" secondItem="LUP-JE-BJ9" secondAttribute="centerX" id="EDr-X7-VRO"/>
+                <constraint firstItem="Xig-g4-WIo" firstAttribute="leading" secondItem="gI4-MS-qtJ" secondAttribute="leading" constant="12" id="HAP-5S-KN5"/>
+                <constraint firstItem="Xig-g4-WIo" firstAttribute="centerX" secondItem="PIx-O4-KVi" secondAttribute="centerX" id="N0K-yu-7PS"/>
+                <constraint firstItem="Xig-g4-WIo" firstAttribute="top" secondItem="5Ms-5K-Mdb" secondAttribute="bottom" constant="12" id="cUi-S1-cwe"/>
+                <constraint firstItem="gI4-MS-qtJ" firstAttribute="trailing" secondItem="5Ms-5K-Mdb" secondAttribute="trailing" constant="12" id="egL-Qr-Mo0"/>
+                <constraint firstItem="5Ms-5K-Mdb" firstAttribute="centerX" secondItem="PIx-O4-KVi" secondAttribute="centerX" id="lBY-aA-djW"/>
+                <constraint firstItem="gI4-MS-qtJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xig-g4-WIo" secondAttribute="bottom" constant="12" id="q9T-YL-4Zt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="460.14492753623193" y="126.5625"/>
+        </view>
+    </objects>
+</document>

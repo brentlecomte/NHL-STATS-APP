@@ -39,6 +39,11 @@ class TodaysGamesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gameData = self.gameData()[indexPath.row]
+        presentLiveFeed(liveFeedLink: gameData.link, teams: gameData.teams)
+    }
 }
 
 private extension TodaysGamesTableViewController {
@@ -46,5 +51,11 @@ private extension TodaysGamesTableViewController {
         guard let delegate = delegate else { return [] }
         
         return delegate.getTodaysGames()
+    }
+    
+    func presentLiveFeed(liveFeedLink: String, teams: Team) {
+        let viewController = ViewControllerProvider.sharedInstance.liveFeedViewController(liveFeedLink: liveFeedLink, teams: teams)
+
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
