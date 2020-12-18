@@ -40,7 +40,7 @@ struct Game: Codable {
     func dateRange() -> String {
         let start = gameDate.index(gameDate.startIndex, offsetBy: 11)
         let end = gameDate.index(gameDate.endIndex, offsetBy: -4)
-        return String(describing: start..<end)
+        return String(describing: gameDate[start..<end])
     }
 }
 

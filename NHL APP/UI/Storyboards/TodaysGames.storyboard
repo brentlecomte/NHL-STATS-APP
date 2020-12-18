@@ -17,32 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAYS GAMES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhB-hu-ph8">
-                                <rect key="frame" x="20" y="90" width="378" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVI-Cn-wXc">
-                                <rect key="frame" x="0.0" y="126" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <connections>
                                     <segue destination="iEL-74-N4D" kind="embed" id="Mzw-mA-AET"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ilF-wE-T53"/>
-                        <color key="backgroundColor" red="0.050980392159999999" green="0.30980392159999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UhB-hu-ph8" firstAttribute="trailing" secondItem="ilF-wE-T53" secondAttribute="trailing" constant="-16" id="BqJ-ne-ln7"/>
                             <constraint firstItem="ilF-wE-T53" firstAttribute="bottom" secondItem="mVI-Cn-wXc" secondAttribute="bottom" id="CSU-HP-wJh"/>
-                            <constraint firstItem="UhB-hu-ph8" firstAttribute="leading" secondItem="ilF-wE-T53" secondAttribute="leading" constant="20" id="F2j-pL-7fo"/>
-                            <constraint firstItem="UhB-hu-ph8" firstAttribute="top" secondItem="ilF-wE-T53" secondAttribute="top" constant="2" id="eqR-WF-EgJ"/>
                             <constraint firstItem="ilF-wE-T53" firstAttribute="trailing" secondItem="mVI-Cn-wXc" secondAttribute="trailing" id="mPh-zZ-a5J"/>
-                            <constraint firstItem="mVI-Cn-wXc" firstAttribute="top" secondItem="UhB-hu-ph8" secondAttribute="bottom" id="nZw-Dg-sTe"/>
                             <constraint firstItem="mVI-Cn-wXc" firstAttribute="leading" secondItem="ilF-wE-T53" secondAttribute="leading" id="wS1-fB-4Is"/>
+                            <constraint firstItem="mVI-Cn-wXc" firstAttribute="top" secondItem="ilF-wE-T53" secondAttribute="top" id="xCB-eI-oa2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NHL" id="qU7-4f-LE9"/>
+                    <navigationItem key="navigationItem" title="Live" id="qU7-4f-LE9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nu1-60-9ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,7 +45,7 @@
             <objects>
                 <tableViewController id="iEL-74-N4D" customClass="TodaysGamesTableViewController" customModule="NHL_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Np7-Sm-l7Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
@@ -85,6 +76,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdG-AM-JCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3996" y="-846"/>
+        </scene>
+        <!--Live-->
+        <scene sceneID="XTe-XX-BzU">
+            <objects>
+                <viewController storyboardIdentifier="LiveFeedViewController" title="Live" hidesBottomBarWhenPushed="YES" id="CYi-aA-oaJ" customClass="LiveFeedViewController" customModule="NHL_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQx-WO-3N0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coO-Fx-gBt">
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <connections>
+                                    <segue destination="k07-oH-rIy" kind="embed" id="Y5E-sp-sDk"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8u4-GW-bWW" customClass="LiveFeedDetailTeamView" customModule="NHL_APP" customModuleProvider="target">
+                                <rect key="frame" x="207" y="44" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6mL-fb-L7e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-XW-kZq">
+                                <rect key="frame" x="0.0" y="44" width="207" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vhY-cU-csa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xd8-dP-HAx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="width" secondItem="BQx-WO-3N0" secondAttribute="width" multiplier="0.5" id="5Gm-A3-iss"/>
+                            <constraint firstAttribute="trailing" secondItem="8u4-GW-bWW" secondAttribute="trailing" id="6eR-Qr-h10"/>
+                            <constraint firstItem="coO-Fx-gBt" firstAttribute="top" secondItem="8u4-GW-bWW" secondAttribute="bottom" id="GtH-6U-eZX"/>
+                            <constraint firstItem="xd8-dP-HAx" firstAttribute="trailing" secondItem="coO-Fx-gBt" secondAttribute="trailing" id="IPl-LO-Be6"/>
+                            <constraint firstItem="xd8-dP-HAx" firstAttribute="bottom" secondItem="coO-Fx-gBt" secondAttribute="bottom" id="aFB-jH-PbA"/>
+                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" id="g2x-tn-3ve"/>
+                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="top" secondItem="xd8-dP-HAx" secondAttribute="top" id="iqx-IE-LiS"/>
+                            <constraint firstItem="coO-Fx-gBt" firstAttribute="top" secondItem="ZrV-XW-kZq" secondAttribute="bottom" id="m70-nr-pbO"/>
+                            <constraint firstItem="coO-Fx-gBt" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" id="n6g-2h-gyY"/>
+                            <constraint firstItem="8u4-GW-bWW" firstAttribute="width" secondItem="BQx-WO-3N0" secondAttribute="width" multiplier="0.5" id="pmc-Aj-iXz"/>
+                            <constraint firstItem="8u4-GW-bWW" firstAttribute="top" secondItem="xd8-dP-HAx" secondAttribute="top" id="xmo-1f-K7E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="awayTeamView" destination="ZrV-XW-kZq" id="wMV-Ue-5hc"/>
+                        <outlet property="homeTeamView" destination="8u4-GW-bWW" id="vjX-QJ-e5M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbq-wT-Qvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4931.884057971015" y="-98.4375"/>
+        </scene>
+        <!--Live Feed Table View Controller-->
+        <scene sceneID="Zym-oy-ks3">
+            <objects>
+                <tableViewController id="k07-oH-rIy" customClass="LiveFeedTableViewController" customModule="NHL_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g8o-48-DyR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="k07-oH-rIy" id="l9o-5d-yRI"/>
+                            <outlet property="delegate" destination="k07-oH-rIy" id="jBf-bN-7Z1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pt9-1R-3pn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5693" y="-98"/>
         </scene>
     </scenes>
     <resources>

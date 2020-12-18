@@ -35,7 +35,6 @@ class TodaysGamesViewController: UIViewController {
         viewModel = TodaysGamesTableViewViewmodel(gamesDataProvider: gamesDataProvider)
         
         loadData()
-        addNavBarImage()
         
         if let tableViewController = children.first as? TodaysGamesTableViewController {
             self.tableViewController = tableViewController
@@ -68,21 +67,6 @@ private extension TodaysGamesViewController {
                 self.view.addSubview(self.activityIndicator)
             }
         }
-    }
-    
-    func addNavBarImage() {
-        let image = #imageLiteral(resourceName: "nhlLogo")
-        let imageView = UIImageView(image: image)
-        
-        if let bannerWidth = navigationController?.navigationBar.frame.size.width, let bannerHeight = navigationController?.navigationBar.frame.size.height {
-            let bannerX = (bannerWidth )/2 - image.size.width/2
-            let bannerY = (bannerHeight )/2 - image.size.height/2
-            
-            imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
-        }
-        imageView.contentMode = .scaleAspectFit
-        
-        navigationItem.titleView = imageView
     }
 }
 

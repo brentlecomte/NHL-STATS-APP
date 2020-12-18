@@ -27,6 +27,16 @@ class ViewControllerProvider {
         
         return viewController
     }
+    
+    func liveFeedViewController(liveFeedLink: String, teams: Team) -> UIViewController {
+        guard let viewController = viewControllerNamed(LiveFeedViewController.storyBoardID, from: .TodaysGames) as? LiveFeedViewController else {return UIViewController()}
+        
+        viewController.gamesDataProvider = dataProviders?.gamesDataProvider
+        viewController.liveFeedLink = liveFeedLink
+        viewController.teams = teams
+        
+        return viewController
+    }
 }
 
 private extension ViewControllerProvider {
