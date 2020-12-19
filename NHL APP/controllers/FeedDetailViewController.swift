@@ -9,41 +9,50 @@
 import UIKit
 
 class FeedDetailViewController: UIViewController {
-    @IBOutlet weak var descriptionFeed: UILabel!
-    @IBOutlet weak var teamImage: UIImageView!
-    var x: Int = 0
-    var y: Int = 0
-    var descriptionDetail: String = ""
-    var teamName: String = ""
+    static let storyBoardID = "FeedDetailViewController"
+    
+    @IBOutlet private var descriptionFeed: UILabel!
+    @IBOutlet private var rinkImage: UIImageView!
+    
+    private let imageWidth = 56
+    
+    var play: AllPlays?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
         setInfo()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setInfo() {
+        guard let play = play else { return }
+        self.descriptionFeed.text = play.result.description
+        setImage(play: play)
+
+    }
+    
+    func setImage(play: AllPlays) {
+        let centerCoordinate = rinkImage.center
+        let imageX: Int = Int(centerCoordinate.x) - (imageWidth/2) - (play.coordinates?.x ?? 0)
+        let imageY: Int = Int(centerCoordinate.y) - Int(rinkImage.frame.minY) - (play.coordinates?.x ?? 0)
+        let teamImage = UIImageView(frame: CGRect(x: imageX, y: imageY, width: imageWidth, height: imageWidth))
         
-        let imageX = 161 - y
-        let imageY = 344 - x
-        self.descriptionFeed.text = descriptionDetail
-        teamImage.frame = CGRect(x: imageX, y: imageY, width: 56, height: 56)
-        teamImage.image = UIImage(named: teamName)
+        teamImage.image = UIImage(named: play.team?.name ?? "AppIcon")
+        
+        view.addSubview(teamImage)
     }
+    
+    func configureNavigationBar() {
+        navigationController?.navigationBar.isTranslucent = false
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        navigationItem.title = "detail"
+        navigationItem.leftItemsSupplementBackButton = true
+       
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeButtonAction))
+        
     }
-    */
-
+    
+    @objc func closeButtonAction() {
+        dismiss(animated: true, completion: nil)
+    }
 }
