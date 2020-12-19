@@ -37,6 +37,20 @@ class ViewControllerProvider {
         
         return viewController
     }
+    
+    func liveFeedDetailViewController(play: AllPlays) -> UINavigationController {
+        guard let navigationController = viewControllerNamed("FeedDetailNavigationController", from: .TodaysGames) as? UINavigationController,
+              let viewController = viewControllerNamed(FeedDetailViewController.storyBoardID, from: .TodaysGames) as? FeedDetailViewController
+        else {
+            return UINavigationController()
+        }
+        
+        viewController.play = play
+        navigationController.addChild(viewController)
+        navigationController.viewControllers = [viewController]
+                
+        return navigationController
+    }
 }
 
 private extension ViewControllerProvider {

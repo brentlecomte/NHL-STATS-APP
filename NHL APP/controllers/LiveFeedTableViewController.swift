@@ -32,11 +32,16 @@ class LiveFeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LiveFeedTableViewCell.reuseIdentifier, for: indexPath) as? LiveFeedTableViewCell else {return UITableViewCell()}
 
-        let indexNumber = liveFeed().count-1-indexPath.row
-        let play = liveFeed()[indexNumber]
+        let play = liveFeed()[indexPath.row]
         
         cell.configure(team: play.team, event: play.result, time: play.about)
         return cell
+
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentDetailView(play: liveFeed()[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
 }
@@ -45,7 +50,15 @@ private extension LiveFeedTableViewController {
     func liveFeed() -> [AllPlays] {
         guard let delegate = delegate else { return [] }
         
-        return delegate.allPlays()
+        return delegate.allPlays().reversed()
+    }
+    
+    func presentDetailView(play: AllPlays) {
+        let viewController = ViewControllerProvider.sharedInstance.liveFeedDetailViewController(play: play)
+        
+        viewController.title = "detail"
+        
+        present(viewController, animated: true, completion: nil)
     }
 }
 
