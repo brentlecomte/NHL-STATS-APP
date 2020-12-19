@@ -17,11 +17,11 @@ final class LiveFeedViewModel {
         self.liveFeedLink = liveFeedLink
     }
     
-    func getLiveFeed(_ completion: @escaping ((Result<[AllPlays], NHLServiceError>) -> Void)) {
+    func getLiveFeed(_ completion: @escaping ((Result<Plays, NHLServiceError>) -> Void)) {
         gamesDataProvider?.fetchLiveFeed(liveFeedLink: liveFeedLink, { result in
             switch result {
             case.success(let feed):
-                completion(.success(feed.allPlays))
+                completion(.success(feed))
             case .failure(let error):
                 completion(.failure(error))
             }

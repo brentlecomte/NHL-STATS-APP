@@ -85,41 +85,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E3t-jf-4pU">
+                                <rect key="frame" x="10" y="44" width="394" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-XW-kZq" customClass="LiveFeedDetailTeamView" customModule="NHL_APP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8u4-GW-bWW" customClass="LiveFeedDetailTeamView" customModule="NHL_APP" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="187" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="NjT-2c-bEE"/>
+                                </constraints>
+                            </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coO-Fx-gBt">
-                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="229" width="414" height="633"/>
                                 <connections>
                                     <segue destination="k07-oH-rIy" kind="embed" id="Y5E-sp-sDk"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8u4-GW-bWW" customClass="LiveFeedDetailTeamView" customModule="NHL_APP" customModuleProvider="target">
-                                <rect key="frame" x="207" y="44" width="207" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es8-hm-byn" userLabel="spacer">
+                                <rect key="frame" x="0.0" y="228" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="6mL-fb-L7e"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-XW-kZq">
-                                <rect key="frame" x="0.0" y="44" width="207" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="vhY-cU-csa"/>
+                                    <constraint firstAttribute="height" constant="1" id="dzU-Gy-Qpu"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xd8-dP-HAx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="width" secondItem="BQx-WO-3N0" secondAttribute="width" multiplier="0.5" id="5Gm-A3-iss"/>
-                            <constraint firstAttribute="trailing" secondItem="8u4-GW-bWW" secondAttribute="trailing" id="6eR-Qr-h10"/>
-                            <constraint firstItem="coO-Fx-gBt" firstAttribute="top" secondItem="8u4-GW-bWW" secondAttribute="bottom" id="GtH-6U-eZX"/>
+                            <constraint firstItem="E3t-jf-4pU" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" constant="10" id="0hQ-Mt-4Kx"/>
+                            <constraint firstItem="E3t-jf-4pU" firstAttribute="top" secondItem="xd8-dP-HAx" secondAttribute="top" id="2me-Zg-N41"/>
                             <constraint firstItem="xd8-dP-HAx" firstAttribute="trailing" secondItem="coO-Fx-gBt" secondAttribute="trailing" id="IPl-LO-Be6"/>
+                            <constraint firstItem="E3t-jf-4pU" firstAttribute="trailing" secondItem="xd8-dP-HAx" secondAttribute="trailing" constant="-10" id="JHw-2D-SpJ"/>
                             <constraint firstItem="xd8-dP-HAx" firstAttribute="bottom" secondItem="coO-Fx-gBt" secondAttribute="bottom" id="aFB-jH-PbA"/>
-                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" id="g2x-tn-3ve"/>
-                            <constraint firstItem="ZrV-XW-kZq" firstAttribute="top" secondItem="xd8-dP-HAx" secondAttribute="top" id="iqx-IE-LiS"/>
-                            <constraint firstItem="coO-Fx-gBt" firstAttribute="top" secondItem="ZrV-XW-kZq" secondAttribute="bottom" id="m70-nr-pbO"/>
+                            <constraint firstItem="xd8-dP-HAx" firstAttribute="trailing" secondItem="es8-hm-byn" secondAttribute="trailing" id="bWA-RR-ihF"/>
+                            <constraint firstItem="es8-hm-byn" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" id="dfm-P6-ZZg"/>
                             <constraint firstItem="coO-Fx-gBt" firstAttribute="leading" secondItem="xd8-dP-HAx" secondAttribute="leading" id="n6g-2h-gyY"/>
-                            <constraint firstItem="8u4-GW-bWW" firstAttribute="width" secondItem="BQx-WO-3N0" secondAttribute="width" multiplier="0.5" id="pmc-Aj-iXz"/>
-                            <constraint firstItem="8u4-GW-bWW" firstAttribute="top" secondItem="xd8-dP-HAx" secondAttribute="top" id="xmo-1f-K7E"/>
+                            <constraint firstItem="es8-hm-byn" firstAttribute="top" secondItem="E3t-jf-4pU" secondAttribute="bottom" constant="4" id="wHA-LX-3dF"/>
+                            <constraint firstItem="coO-Fx-gBt" firstAttribute="top" secondItem="es8-hm-byn" secondAttribute="bottom" id="wwm-gh-RVV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -136,7 +144,7 @@
             <objects>
                 <tableViewController id="k07-oH-rIy" customClass="LiveFeedTableViewController" customModule="NHL_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g8o-48-DyR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="633"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>

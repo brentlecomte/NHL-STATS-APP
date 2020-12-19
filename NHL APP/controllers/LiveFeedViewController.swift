@@ -28,12 +28,19 @@ class LiveFeedViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableViewController?.tableView.reloadData()
+            }
+        }
+    }
+    
+    private var currentPlay: CurrentPlay? {
+        didSet {
+            DispatchQueue.main.async {
                 self.loadTeamViews()
             }
         }
     }
     
-    @IBOutlet private var awayTeamView: UIView!
+    @IBOutlet private var awayTeamView: LiveFeedDetailTeamView!
     @IBOutlet private var homeTeamView: LiveFeedDetailTeamView!
     
     override func viewDidLoad() {
@@ -61,25 +68,16 @@ class LiveFeedViewController: UIViewController {
     }
     
     func loadTeamViews() {
-        homeTeamView.configure(team: teams, type: .home)
-        let teamView = LiveFeedDetailTeamView(frame: awayTeamView.frame)
-        awayTeamView.addSubview(teamView)
-        NSLayoutConstraint(item: teamView, attribute: .top, relatedBy: .equal, toItem: awayTeamView, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: teamView, attribute: .leading, relatedBy: .equal, toItem: awayTeamView, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: teamView, attribute: .trailing, relatedBy: .equal, toItem: awayTeamView, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: teamView, attribute: .bottom, relatedBy: .equal, toItem: awayTeamView, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
-        view.layoutIfNeeded()
-        homeTeamView.contentView.sizeToFit()
-        homeTeamView.translatesAutoresizingMaskIntoConstraints = false
-        awayTeamView.translatesAutoresizingMaskIntoConstraints = false
-//        awayTeamView.contentView.sizeToFit()
+        homeTeamView.configure(team: teams, currentPlay: currentPlay, type: .home)
+        awayTeamView.configure(team: teams, currentPlay: currentPlay, type: .away)
     }
     
     func loadData() {
         viewModel?.getLiveFeed({ result in
             switch result {
             case.success(let plays):
-                self.plays = plays
+                self.plays = plays.allPlays
+                self.currentPlay = plays.currentPlay
             case .failure(let error):
                 print(error.localizedDescription)
             }
