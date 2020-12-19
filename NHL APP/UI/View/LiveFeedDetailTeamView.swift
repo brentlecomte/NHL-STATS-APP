@@ -28,14 +28,16 @@ class LiveFeedDetailTeamView: UIView {
     private func commonInit() {
         Bundle.main.loadNibNamed("LiveFeedDetailTeamView", owner: self, options: nil)
         addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    func configure(team: Team?, type: TeamEnum) {
+    func configure(team: Team?, currentPlay: CurrentPlay?, type: TeamEnum) {
         switch type {
         case .away:
-            setUpView(team: team?.away.team?.name, score: team?.away.score)
+            setUpView(team: team?.away.team?.name, score: currentPlay?.about.goals.away)
         case .home:
-            setUpView(team: team?.home.team?.name, score: team?.home.score)
+            setUpView(team: team?.home.team?.name, score: currentPlay?.about.goals.home)
         }
     }
     
