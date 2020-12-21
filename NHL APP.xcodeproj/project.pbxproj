@@ -34,6 +34,7 @@
 		84945A6C20A59AA60087B7FF /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */; };
 		84945A6E20A5B1910087B7FF /* TeamsStatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */; };
 		84945A7020A5B81D0087B7FF /* statsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84945A6F20A5B81D0087B7FF /* statsCell.swift */; };
+		849A807B2590A21500913407 /* NHL_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A807A2590A21500913407 /* NHL_APPTests.swift */; };
 		84E15AB120A3997700B6830C /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E15AB020A3997700B6830C /* PlayersTableViewController.swift */; };
 		84E15AB320A3A52100B6830C /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E15AB220A3A52100B6830C /* PlayerCell.swift */; };
 		84E34E20258B7F5400EF5A71 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E34E1F258B7F5400EF5A71 /* Bootstrap.swift */; };
@@ -49,6 +50,16 @@
 		84F4E83520A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */; };
 		84F4E83720A5CE270071F851 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		849A807D2590A21500913407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843FE1AB209A366C00858278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 843FE1B2209A366C00858278;
+			remoteInfo = "NHL APP";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +91,9 @@
 		84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsStatsTableViewController.swift; sourceTree = "<group>"; };
 		84945A6F20A5B81D0087B7FF /* statsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statsCell.swift; sourceTree = "<group>"; };
+		849A80782590A21500913407 /* NHL APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NHL APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		849A807A2590A21500913407 /* NHL_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHL_APPTests.swift; sourceTree = "<group>"; };
+		849A807C2590A21500913407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E15AB020A3997700B6830C /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
 		84E15AB220A3A52100B6830C /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		84E34E1F258B7F5400EF5A71 /* Bootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
@@ -98,6 +112,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		843FE1B0209A366C00858278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849A80752590A21500913407 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				843FE1B5209A366C00858278 /* NHL APP */,
+				849A80792590A21500913407 /* NHL APPTests */,
 				843FE1B4209A366C00858278 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				843FE1B3209A366C00858278 /* NHL APP.app */,
+				849A80782590A21500913407 /* NHL APPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,20 +244,45 @@
 		8446A4C520A0DB9A007DE2A9 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				849A80722590A14400913407 /* TableViewControllers */,
+				849A80712590A13800913407 /* ViewControllers */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		849A80712590A13800913407 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				84E34E3A258BBFF800EF5A71 /* TodaysGamesViewController.swift */,
 				8446A4C620A0FE3E007DE2A9 /* LiveFeedViewController.swift */,
+				8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */,
+				84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */,
+				84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		849A80722590A14400913407 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */,
+				84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */,
 				8407E766258CC27300C4D9AE /* LiveFeedTableViewController.swift */,
 				843FE1C8209A427200858278 /* TodaysGamesTableViewController.swift */,
-				8402666C20A0C2A4006B13A2 /* TeamsViewController.swift */,
 				8402666E20A0CECF006B13A2 /* TeamsTableViewController.swift */,
 				8446A4CA20A19187007DE2A9 /* StandingsTableViewController.swift */,
 				84E15AB020A3997700B6830C /* PlayersTableViewController.swift */,
-				84945A6B20A59AA60087B7FF /* PlayerDetailViewController.swift */,
-				84945A6D20A5B1910087B7FF /* TeamsStatsTableViewController.swift */,
-				84F4E83420A5BEEC0071F851 /* TeamsStatsOverviewTableViewController.swift */,
-				84F4E83620A5CE270071F851 /* FeedDetailViewController.swift */,
 			);
-			path = controllers;
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		849A80792590A21500913407 /* NHL APPTests */ = {
+			isa = PBXGroup;
+			children = (
+				849A807A2590A21500913407 /* NHL_APPTests.swift */,
+				849A807C2590A21500913407 /* Info.plist */,
+			);
+			path = "NHL APPTests";
 			sourceTree = "<group>";
 		};
 		84E34E30258B89CB00EF5A71 /* Storyboards */ = {
@@ -304,13 +352,31 @@
 			productReference = 843FE1B3209A366C00858278 /* NHL APP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		849A80772590A21500913407 /* NHL APPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849A807F2590A21500913407 /* Build configuration list for PBXNativeTarget "NHL APPTests" */;
+			buildPhases = (
+				849A80742590A21500913407 /* Sources */,
+				849A80752590A21500913407 /* Frameworks */,
+				849A80762590A21500913407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849A807E2590A21500913407 /* PBXTargetDependency */,
+			);
+			name = "NHL APPTests";
+			productName = "NHL APPTests";
+			productReference = 849A80782590A21500913407 /* NHL APPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		843FE1AB209A366C00858278 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Brent Le Comte";
 				TargetAttributes = {
@@ -322,6 +388,10 @@
 								enabled = 1;
 							};
 						};
+					};
+					849A80772590A21500913407 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 843FE1B2209A366C00858278;
 					};
 				};
 			};
@@ -339,6 +409,7 @@
 			projectRoot = "";
 			targets = (
 				843FE1B2209A366C00858278 /* NHL APP */,
+				849A80772590A21500913407 /* NHL APPTests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +426,13 @@
 				843FE1BE209A366E00858278 /* Assets.xcassets in Resources */,
 				843FE1BC209A366D00858278 /* Main.storyboard in Resources */,
 				84E34E3E258BE2E500EF5A71 /* LiveFeedTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849A80762590A21500913407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +480,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		849A80742590A21500913407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849A807B2590A21500913407 /* NHL_APPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		849A807E2590A21500913407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 843FE1B2209A366C00858278 /* NHL APP */;
+			targetProxy = 849A807D2590A21500913407 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		843FE1BA209A366D00858278 /* Main.storyboard */ = {
@@ -576,6 +670,53 @@
 			};
 			name = Release;
 		};
+		849A80802590A21500913407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QUH7V985N;
+				INFOPLIST_FILE = "NHL APPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brentlecomte.NHL-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NHL APP.app/NHL APP";
+			};
+			name = Debug;
+		};
+		849A80812590A21500913407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QUH7V985N;
+				INFOPLIST_FILE = "NHL APPTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brentlecomte.NHL-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NHL APP.app/NHL APP";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +734,15 @@
 			buildConfigurations = (
 				843FE1C6209A366E00858278 /* Debug */,
 				843FE1C7209A366E00858278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849A807F2590A21500913407 /* Build configuration list for PBXNativeTarget "NHL APPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849A80802590A21500913407 /* Debug */,
+				849A80812590A21500913407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
