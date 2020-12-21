@@ -24,14 +24,14 @@ class FeedDetailViewController: UIViewController {
         setInfo()
     }
     
-    func setInfo() {
+    private func setInfo() {
         guard let play = play else { return }
         self.descriptionFeed.text = play.result.description
         setImage(play: play)
 
     }
     
-    func setImage(play: AllPlays) {
+    private func setImage(play: AllPlays) {
         let centerCoordinate = rinkImage.center
         let imageX: Int = Int(centerCoordinate.x) - (imageWidth/2) - (play.coordinates?.x ?? 0)
         let imageY: Int = Int(centerCoordinate.y) - Int(rinkImage.frame.minY) - (play.coordinates?.x ?? 0)
@@ -42,7 +42,7 @@ class FeedDetailViewController: UIViewController {
         view.addSubview(teamImage)
     }
     
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         navigationController?.navigationBar.isTranslucent = false
 
         navigationItem.title = "detail"
@@ -52,7 +52,7 @@ class FeedDetailViewController: UIViewController {
         
     }
     
-    @objc func closeButtonAction() {
+    @objc private func closeButtonAction() {
         dismiss(animated: true, completion: nil)
     }
 }
