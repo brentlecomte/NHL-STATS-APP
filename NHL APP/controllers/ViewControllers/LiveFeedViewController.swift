@@ -54,17 +54,15 @@ class LiveFeedViewController: UIViewController {
             tableViewController.delegate = self
         }
         
-//        DispatchQueue.main.async {
-//            self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.runTimedCode), userInfo: nil, repeats: true)
-//        }
+        DispatchQueue.main.async {
+            self.gameTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
+        }
         
 //        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(succes, error) in if error != nil {
 //            print("failed")
 //        }else{
 //            print("nailed it")
 //        }})
-//
-//        loadMatchInfo()
     }
     
     func loadTeamViews() {
@@ -72,7 +70,7 @@ class LiveFeedViewController: UIViewController {
         awayTeamView.configure(team: teams, currentPlay: currentPlay, type: .away)
     }
     
-    func loadData() {
+    @objc func loadData() {
         viewModel?.getLiveFeed({ result in
             switch result {
             case.success(let plays):
@@ -83,46 +81,6 @@ class LiveFeedViewController: UIViewController {
             }
         })
     }
-    
-//    func loadMatchInfo() {
-//        homeTeamName.text = homeTeam
-//        awayTeamName.text = awayTeam
-//
-//        homeTeamImage.image = UIImage(named: homeTeam)
-//        awayTeamImage.image = UIImage(named: awayTeam)
-//
-//    }
-    
-//    @objc func runTimedCode() {
-//        let task = URLSession.shared.dataTask(with: liveFeedURL!, completionHandler: dataLoaded)
-//        task.resume()
-//
-//        if(liveFeedData.count == 0) {
-//            liveFeedtable.isHidden = true
-//        } else {
-//            liveFeedtable.isHidden = false
-//            notStarted.isHidden = true
-//            if(liveFeedData.count != prevAllPlaysLength) {
-//                timedNotifications(inSeconds: 1) { (succes) in
-//                    if succes {
-//                        print("succes")
-//                    }
-//                }
-//
-//                print((liveFeedData.last?.about?.goals.home)!)
-//                self.homeTeamScore.text = String((liveFeedData.last?.about?.goals.home)!)
-//                self.awayTeamScore.text = String((liveFeedData.last?.about?.goals.away)!)
-//
-//            } else {
-//                print("geen veranderingen")
-//            }
-//            prevAllPlaysLength = liveFeedData.count
-//        }
-//
-//
-//
-//
-//    }
     
 //    func timedNotifications(inSeconds: TimeInterval, completion: @escaping (_ Succes: Bool) -> ()){
 //
