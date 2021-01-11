@@ -9,7 +9,10 @@
 import Foundation
 
 enum endPoints: String {
-    case baseURL = "https://statsapi.web.nhl.com"
+    case baseURL = "https://statsapi.web.nhl.com/api"
     
     case shedule = "/schedule"
+    case teams = "/teams"
+    
+    case v1 = "/v1"
 }

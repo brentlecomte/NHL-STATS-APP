@@ -85,5 +85,6 @@ class TeamsViewController: UIViewController {
         let detailVC = segue.destination as! PlayersTableViewController
         detailVC.teamId = (currentDetail?.id)!
     }
-
 }
+
+

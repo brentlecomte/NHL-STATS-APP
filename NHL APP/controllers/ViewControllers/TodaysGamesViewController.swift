@@ -19,7 +19,7 @@ class TodaysGamesViewController: UIViewController {
     private var viewModel: TodaysGamesTableViewViewmodel?
     private var tableViewController: TodaysGamesTableViewController?
     
-    private let activityIndicator = UIActivityIndicatorView(style: .gray)
+    private let activityIndicator = UIActivityIndicatorView(style: .medium)
     
     static let storyBoardID = "TodaysGamesViewController"
     
@@ -34,12 +34,15 @@ class TodaysGamesViewController: UIViewController {
     override func viewDidLoad() {
         viewModel = TodaysGamesTableViewViewmodel(gamesDataProvider: gamesDataProvider)
         
-        loadData()
-        
         if let tableViewController = children.first as? TodaysGamesTableViewController {
             self.tableViewController = tableViewController
             tableViewController.delegate = self
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
     }
 }
 

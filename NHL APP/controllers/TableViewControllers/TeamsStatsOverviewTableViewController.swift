@@ -66,10 +66,9 @@ class TeamsStatsOverviewTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "teamsCell", for: indexPath) as! teamsCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "teamsCell", for: indexPath) as? TeamTableViewCell else { return UITableViewCell() }
         
-        cell.teamName.text = teamsData[indexPath.row].name
-        cell.teamLogo.image = UIImage(named: teamsData[indexPath.row].name!)
+        cell.configure(teamName: teamsData[indexPath.row].name)
         
         return cell
     }
