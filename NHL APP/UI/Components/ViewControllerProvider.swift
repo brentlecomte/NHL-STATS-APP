@@ -13,10 +13,13 @@ class ViewControllerProvider {
     enum Storyboard: String {
         case Main
         case TodaysGames
+        case TeamsOverview
     }
     static let sharedInstance = ViewControllerProvider()
 
     var dataProviders: DataProviders?
+    
+    // MARK: - TodaysGames
     
     func todaysGamesViewController() -> UIViewController {
         let viewController = initialViewControllerFromStoryboard(.TodaysGames)!
@@ -50,6 +53,17 @@ class ViewControllerProvider {
         navigationController.viewControllers = [viewController]
                 
         return navigationController
+    }
+    
+    // MARK: - TeamsOverview
+    
+    func teamsOverviewViewController() -> UIViewController {
+        let viewController = initialViewControllerFromStoryboard(.TeamsOverview)!
+        
+        if let viewController = viewController.children.first as? TeamsOverviewViewController {
+            viewController.teamsDataProvider = dataProviders?.teamsDataProvider
+        }
+        return viewController
     }
 }
 

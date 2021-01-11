@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 protocol LiveFeedViewControllerDelegate: class {
     func allPlays() -> [AllPlays]
@@ -57,12 +56,6 @@ class LiveFeedViewController: UIViewController {
         DispatchQueue.main.async {
             self.gameTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
         }
-        
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {(succes, error) in if error != nil {
-//            print("failed")
-//        }else{
-//            print("nailed it")
-//        }})
     }
     
     func loadTeamViews() {
@@ -81,35 +74,10 @@ class LiveFeedViewController: UIViewController {
             }
         })
     }
-    
-//    func timedNotifications(inSeconds: TimeInterval, completion: @escaping (_ Succes: Bool) -> ()){
-//
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
-//
-//        let content = UNMutableNotificationContent()
-//
-//        content.title = String((liveFeedData.last?.result.event)!)
-//        if(liveFeedData.last?.team?.name != nil){
-//            content.subtitle = String((liveFeedData.last?.team?.name)!)
-//        }
-//        content.body = String((liveFeedData.last?.result.event.description)!)
-//
-//        let request = UNNotificationRequest(identifier: "Game Update", content: content, trigger: trigger)
-//
-//        UNUserNotificationCenter.current().add(request) { (error) in
-//            if error != nil {
-//                completion(false)
-//            }else {
-//                completion(true)
-//            }
-//        }
-//    }
 }
 
 extension LiveFeedViewController: LiveFeedViewControllerDelegate {
     func allPlays() -> [AllPlays] {
         return plays
     }
-    
-    
 }

@@ -12,10 +12,12 @@ struct Bootstrap {
     static func datalayer() {
         // serviceProviders
         let gamesServiceProvider = NHLGamesServiceProvider()
+        let teamsServiceProvider = NHLTeamsServiceProvider()
         
         // dataProviders
         let gamesDataProvider = GamesDataProvider(serviceProvider: gamesServiceProvider)
+        let teamsDataProvider = TeamsDataProvider(serviceProvider: teamsServiceProvider)
         
-        ViewControllerProvider.sharedInstance.dataProviders = DataProviders.init(gamesDataProvider: gamesDataProvider)
+        ViewControllerProvider.sharedInstance.dataProviders = DataProviders.init(gamesDataProvider: gamesDataProvider, teamsDataProvider: teamsDataProvider)
     }
 }

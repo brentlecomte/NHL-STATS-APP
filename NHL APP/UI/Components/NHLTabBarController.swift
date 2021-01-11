@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 class NHLTabBarController: UITabBarController, UITabBarControllerDelegate {
     private var todaysGamesTableViewController: UIViewController?
+    private var teamsOverviewViewController: UIViewController?
     
     override func viewDidLoad() {
         setViewControllers()
@@ -19,8 +20,12 @@ class NHLTabBarController: UITabBarController, UITabBarControllerDelegate {
         todaysGamesTableViewController = ViewControllerProvider.sharedInstance.todaysGamesViewController()
         todaysGamesTableViewController?.tabBarItem.title = "Live"
         
+        teamsOverviewViewController = ViewControllerProvider.sharedInstance.teamsOverviewViewController()
+        teamsOverviewViewController?.tabBarItem.title = "TeamsOverview"
+        
         viewControllers = [
-            todaysGamesTableViewController!
+            todaysGamesTableViewController!,
+            teamsOverviewViewController!
         ]
 
         selectedIndex = 0
